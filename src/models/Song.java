@@ -1,20 +1,33 @@
-package prova;
+package models;
+
+import exceptions.InvalidLengthException;
+import exceptions.InvalidRatingException;
 
 import java.io.*;
 
 public class Song implements Serializable {
+    private String playlist;
     private String artist;
     private String title;
     private String length;
     private String genre;
     private int rating;
 
-    public Song(String artist, String title, String length, String genre, int rating) {
+    public Song(String playlist, String artist, String title, String length, String genre, int rating) {
+        this.playlist = playlist;
         this.artist = artist;
         this.title = title;
         this.length = length;
         this.genre = genre;
         this.rating = rating;
+    }
+
+    public void setPlaylist(String playlist) {
+        this.playlist = playlist;
+    }
+
+    public String getPlaylist() {
+        return playlist;
     }
 
     public void setArtist(String artist) {

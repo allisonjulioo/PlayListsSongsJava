@@ -1,4 +1,4 @@
-package prova;
+package DAO;
 
 import java.awt.*;
 
@@ -7,8 +7,9 @@ public class Main
 	public static void main( String[] arg)
 	{
 		Menu menu = new Menu();
-		
-		menu.loadPlaylist();
+		PlayListsDAO playlistsDAO = new PlayListsDAO();
+
+		playlistsDAO.loadPlaylist();
 		menu.runMenu();
 
 	}
